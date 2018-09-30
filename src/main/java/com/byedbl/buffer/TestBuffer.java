@@ -20,7 +20,7 @@ public class TestBuffer {
      * remaining 剩余: = limit - position
      * reset  : p = mark
      * slice :  切片,从一个 缓冲区到另一个 缓冲区的 起始位置
-     * compact : remaining 移到最前面
+     * compact : remaining 移到最前面,position与limit之间的数据，copy到buf的0到limit-position，进行压缩（非实际以压缩，只是移动）
      *
      *</pre>
      *

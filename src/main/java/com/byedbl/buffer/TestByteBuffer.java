@@ -6,6 +6,40 @@ import java.nio.ByteBuffer;
 public class TestByteBuffer {
     private static ByteBuffer byteBuffer = null;
 
+    /**
+     * <pre>
+     *  https://www.cnblogs.com/ruber/p/6857159.html
+     *  这些属性总是满足以下条件：
+     　　0 <= mark <= position <= limit <= capacity
+
+     limit和position的值除了通过limit()和position()函数来设置，也可以通过下面这些函数来改变：
+
+     Buffer clear()
+     　　把position设为0，把limit设为capacity，一般在把数据写入Buffer前调用。
+
+     Buffer flip()
+     　　把limit设为当前position，把position设为0，一般在从Buffer读出数据前调用。
+
+     Buffer rewind()
+     　　把position设为0，limit不变，一般在把数据重写入Buffer前调用。
+
+     compact()
+
+     　　该方法的作用是将 position 与 limit之间的数据复制到buffer的开始位置，复制后 position  = limit -position,limit = capacity
+
+     　　但如果position 与limit 之间没有数据的话发，就不会进行复制  详细参考：java nio Buffer 中 compact的作用
+
+     mark()与reset()方法
+
+     　　通过调用Buffer.mark()方法，可以标记Buffer中的一个特定position。之后可以通过调用Buffer.reset()方法恢复到这个position。例如：
+
+     　　1.buffer.mark();
+
+     　　2.//call buffer.get() a couple of times, e.g. during parsing.
+
+     　　3.buffer.reset(); //set position back to mark
+     * @param args
+     */
     public static void main(String[] args) {
         /* 以下顺序不要改变*/
         initByteBuffer();
