@@ -5,16 +5,26 @@ import java.nio.ByteBuffer;
 public class TestBuffer {
 
     /**
-     * <p>
-     *     byte ,1个字节 [-128,127]
-     *     short,2个字节 [-32768,32767]
-     *     int ,4个字节 [-2,147,483,648,2,147,485,647]
-     *     long, 8个字节 [-9,223,372,036,854,775,808（-2^63）,9,223,372,036,854,775,807（2^63 -1）]
-     *     float 4个字节
-     *     double
-     *     boolean
-     *     char 2 个字节
-     * </p>
+     * <pre>
+     * capacity: 容量,最大元素个数
+     * position: 位置,当前 数据 操作开始的地方
+     * limit:  限制,第一个不能 读写的元素
+     * mark : 标记当前的position的位置
+     *
+     * -1<= mark <= position <= limit <= capacity
+     * 0<= position <= limit <= capacity
+     * 默认 limit = capacity,mark = undefined,position=0
+     * clear : p = 0,l = c ,mark = undefined
+     * flip : l = p, p=0,mark = undefined
+     * rewind : p = 0,mark = undefined
+     * remaining 剩余: = limit - position
+     * reset  : p = mark
+     * slice :  切片,从一个 缓冲区到另一个 缓冲区的 起始位置
+     * compact : remaining 移到最前面
+     *
+     *</pre>
+     *
+     *
      * @param args
      */
     public static void main(String[] args) {
