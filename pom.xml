@@ -11,6 +11,7 @@
     <modules>
         <module>spring-task</module>
         <module>java-study</module>
+        <module>spring-mvc</module>
     </modules>
 
     <properties>
