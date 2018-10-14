@@ -23,6 +23,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * https://github.com/killme2008/aviator/wiki
+ * https://github.com/killme2008/aviator/tree/master/src/test/java/com/googlecode/aviator/example
  */
 public class TestAviator {
     @Test
