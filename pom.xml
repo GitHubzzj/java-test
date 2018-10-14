@@ -12,6 +12,7 @@
         <module>spring-task</module>
         <module>java-study</module>
         <module>spring-mvc</module>
+        <module>aviator-test</module>
     </modules>
 
     <properties>
