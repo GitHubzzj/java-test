@@ -13,6 +13,7 @@
         <module>java-study</module>
         <module>spring-mvc</module>
         <module>aviator-test</module>
+        <module>curator</module>
     </modules>
 
     <properties>
