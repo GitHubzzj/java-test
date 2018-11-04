@@ -62,6 +62,9 @@
             <version>0.10.2.2</version>
         </dependency>
 
+        <!--兼容性参考-->
+        <!--https://spring.io/projects/spring-kafka-->
+
         <!--<dependency>-->
             <!--<groupId>org.apache.kafka</groupId>-->
             <!--<artifactId>kafka-examples</artifactId>-->
