@@ -14,6 +14,8 @@
         <module>spring-mvc</module>
         <module>aviator-test</module>
         <module>curator</module>
+        <module>spring-kafka</module>
+        <module>dubbo-demo</module>
     </modules>
 
     <properties>
